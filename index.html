@@ -6,13 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notes App</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <script src="scripts/step2.js" defer></script>
+    <script src="scripts/step3.js" defer></script>
 
     <style>
         img {
             height: 200px;
-            width: 300px;
-        }
+            width: 300px;/* 
+            visibility: hidden;
+             *//* display: none;
+         */}
+
+         .hide{
+            display: none;
+         }
+
+         #articles-title {
+            background-color: #ddd;
+            text-align: center;
+            padding: 10px 0;
+            cursor: pointer;
+         }
     </style>
   
 </head>
@@ -20,9 +33,16 @@
     <header>
         <h1>Notes App</h1>
     </header>
+    <section>
+        <button id="add-btn" class="btn btn-light">Add</button>
+        <ul id="std-list">
+
+        </ul>
+    </section>
     <a id="say-hello" href="https://www.google.com" class="btn btn-primary">Say Hello</a>
     <input id="user-input" type="text">
-    <section>
+    <h2 id="articles-title" >Articles</h2>
+    <section id="section" class="hide">
         <p class="bg-dark text-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae eos, nostrum repellat quae itaque aut repellendus error incidunt beatae dolor illum, nulla voluptatum laboriosam ut velit et obcaecati porro ipsa.</p>
         <p id="p-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae eos, nostrum repellat quae itaque aut repellendus error incidunt beatae dolor illum, nulla voluptatum laboriosam ut velit et obcaecati porro ipsa.</p>
         <p class="bg-dark text-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae eos, nostrum repellat quae itaque aut repellendus error incidunt beatae dolor illum, nulla voluptatum laboriosam ut velit et obcaecati porro ipsa.</p>
@@ -32,7 +52,12 @@
     <section id="image-display">
         <img src="images/food.jpeg" alt="">
         <button class="btn btn-light">Change</button>
+        <button id="show-btn" class="btn btn-light">Show/Hide</button>
+
     </section>
+
+    
+
     <footer>
         <small>Copyrights &copy; 2022</small>
     </footer>
